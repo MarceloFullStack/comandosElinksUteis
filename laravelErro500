@@ -1,0 +1,5 @@
+Umas das soluções foi acessar a pasta do projeto, via cmd, e rodar o seguinte comando:
+cp .env.example .env
+php artisan key:generate
+
+

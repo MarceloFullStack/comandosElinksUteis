@@ -1,0 +1,2 @@
+sudo /opt/lampp/bin/mysql_upgrade --force --verbose --verbose other-options -u root -p 
+

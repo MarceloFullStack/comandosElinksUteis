@@ -1,0 +1,6 @@
+set @autoid :=0; 
+update {nomeTabela} set id = @autoid := (@autoid+1);
+alter table {nomeTabela} Auto_Increment = 1;
+
+
+obs:remover o que esta entre { } e colocar o nome da tua tabela.

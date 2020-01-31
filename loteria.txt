@@ -1,0 +1,17 @@
+<?php
+
+function apostar($qtdDeDezenas, $numMaximoDezena)
+{
+
+    $dezenas = [];
+        while (count($dezenas) < $qtdDeDezenas) {
+            $dezenaGerada = str_pad(rand(0, $numMaximoDezena), 2, 0, STR_PAD_LEFT);
+            if (!in_array($dezenaGerada, $dezenas)) {
+                $dezenas[] = $dezenaGerada;
+            }
+        }
+
+    return $dezenas;
+}
+
+var_dump(apostar(5, 50));

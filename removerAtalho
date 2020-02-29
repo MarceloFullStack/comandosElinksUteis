@@ -1,0 +1,9 @@
+In general this can happen because the OS (window system) has priority and intercepts this shortcut and stops propagation to your desired application. Solution: Removing the shortcuts using dconf-editor:
+
+sudo apt-get install dconf-tools
+dconf-editor
+in dconf-editor go to: /org/gnome/desktop/wm/keybindings/
+Find switch-to-workspace-down, put ['disabled'] instead of default
+same for ...-up
+quit dconf-editor and you are done
+I always have this problem when I want to use some Eclipse IDE shortcuts: https://bugs.eclipse.org/bugs/show_bug.cgi?id=321094

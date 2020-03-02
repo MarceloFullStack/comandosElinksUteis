@@ -1,0 +1,32 @@
+{
+    // "blade.format.enable": true
+    // "editor.tokenColorCustomizations": {
+    //     "comments": "#535353",
+    //     "strings": "#638554ce"    
+    "editor.tokenColorCustomizations": {"textMateRules": [
+        {
+        
+        "scope": ["keyword.blade"],
+        "settings": { "foreground": "#aa6703"},
+        
+        },
+        {
+        
+            "scope": ["punctuation.section.embedded"],
+            "settings": { "foreground": "#ffae00"},
+            
+        },
+        {
+        
+            "scope": ["comment.block.documentation.phpdoc.php"],
+            "settings": { "foreground": "#535353"},
+            
+        },
+],
+    "comments": "#535353",
+}
+
+
+}
+
+

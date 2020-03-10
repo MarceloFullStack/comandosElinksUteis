@@ -7,13 +7,31 @@
         {
         
         "scope": ["keyword.blade"],
-        "settings": { "foreground": "#aa6703"},
+        "settings": { "foreground": "#ec9511"},
         
         },
         {
         
             "scope": ["punctuation.section.embedded"],
             "settings": { "foreground": "#ffae00"},
+            
+        },
+        {
+        
+            "scope": ["keyword.other.phpdoc.php"],
+            "settings": { "foreground": "#6f00ff"},
+            
+        },
+        {
+        
+            "scope": ["keyword.other.type.php"],
+            "settings": { "foreground": "#9042f7"},
+            
+        },
+        {
+        
+            "scope": ["support.class.php"],
+            "settings": { "foreground": "#9042f7"},
             
         },
         {

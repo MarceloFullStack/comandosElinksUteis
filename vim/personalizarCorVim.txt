@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=MUQC5FYFp-A
+
+1 crie na home "~" uma pasta chamada .vim
+sudo mkdir .vim
+
+2 clone o repositorio https://github.com/rafi/awesome-vim-colorschemes
+
+3 coloque todo esse conteudo na pasta q vc criou .vim
+
+4 pronto, agora e so abrir o vim apertar esc pra ir pra o modo de comando e colocar
+
+:colorschema dracula pra testar 

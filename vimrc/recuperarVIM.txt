@@ -1,0 +1,1 @@
+sudo apt-get install --reinstall vim-gnome vim-gui-common vim-common vim-runtime

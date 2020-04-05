@@ -98,3 +98,4 @@ Plug 'christoomey/vim-tmux-navigator'
 "}}
 
 call plug#end()
+set t_Co=256

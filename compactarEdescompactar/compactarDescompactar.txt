@@ -1,0 +1,9 @@
+Descompactando um arquivo tar.gz
+Acesse o diretório que possui o arquivo;
+Digite o comando:
+tar -xzvf arquivo.tar.gz
+
+Compactando um arquivo tar.gz
+Acesse o diretório onde se encontra o arquivo ou o diretório que deseja compactar;
+Digite o comando:
+tar -czvf arquivo.tar.gz pasta

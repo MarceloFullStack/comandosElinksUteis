@@ -1,0 +1,38 @@
+add_action( 'admin_menu', 'rename_woocoomerce_admin_menu', 999 );
+
+function rename_woocoomerce_admin_menu()
+{
+    global $menu;
+
+    // Pinpoint menu item
+    $woo = recursive_array_search_php( 'WooCommerce', $menu );
+
+    // Validate
+    if( !$woo )
+        return;
+
+    $menu[$woo][0] = 'LOJA';
+}
+
+
+
+// http://www.php.net/manual/en/function.array-search.php#91365
+function recursive_array_search_php( $needle, $haystack )
+{
+    foreach( $haystack as $key => $value )
+    {
+        $current_key = $key;
+        if(
+            $needle === $value
+            OR (
+                is_array( $value )
+                && recursive_array_search_php( $needle, $value ) !== false
+            )
+        )
+        {
+            return $current_key;
+        }
+    }
+    return false;
+}
+

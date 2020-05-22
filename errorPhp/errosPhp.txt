@@ -1,0 +1,24 @@
+<?php
+// Desativa toda exibição de erros
+error_reporting(0);
+
+// Exibe erros simples
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+// Exibir E_NOTICE também pode ser bom para mostrar variáveis não iniciadas...
+// ou com erros de digitação.
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
+// Exibe todos os erros, exceto E_NOTICE
+error_reporting(E_ALL & ~E_NOTICE);
+
+// Exibe todos os erros PHP (see changelog)
+error_reporting(E_ALL);
+
+// Exibe todos os erros PHP
+error_reporting(-1);
+
+// Mesmo que error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
+
+?>

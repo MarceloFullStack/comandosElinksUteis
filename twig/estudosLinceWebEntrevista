@@ -1,0 +1,4 @@
+1- integrar twig com o laravel.
+	a- Foi necessário usar uma biblioteca de terceiros visto que o laravel tem como template engine nativa o blade.
+	b-Repositório da biblioteca- https://github.com/rcrowe/TwigBridge
+2- Estudo introdutório sobre twig, especificamente junto ao lararvel.

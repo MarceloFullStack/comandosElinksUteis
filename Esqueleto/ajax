@@ -1,0 +1,77 @@
+formulario post
+
+ 		{# FORM #}
+				<form name="formLogin">
+					{{ csrf_field() }}
+                    
+					<input type="hidden" id="usuario_id" name="usuario_id" value="{{usuario['usuario_id']}}"><br/>
+
+					<input type="hidden" id="video_id" name="video_id" value="{{dados['video_id']}}"><br/>
+					
+					<div class="alert alert-success d-none messageBox" role="alert">mensagem aqui</div>
+
+
+					<button id="teste" class="btn-para-assistir btn-block" type="submit" name="save"><i class="fas fa-plus"></i>Adicionar à Lista para Assistir</button>
+					
+				</form>
+            	{# FORM #}
+########################################################################################################################################################
+no front-JAVASCRIPT
+	<script>
+		 //iniciar jquery
+          $(function(){
+		  $('form[name="formLogin"]').submit(function(event){
+			  event.preventDefault()
+				  $.ajax({
+					  type: "post",
+					  url: "{{route('adicionarPraAssistir')}}",
+					  data: $(this).serialize(),
+					  dataType: 'json',
+					  success: function (response) {
+						  		
+						$('.messageBox').removeClass('d-none').html(response)
+						
+				  }
+			  });
+		  })
+	  }) 
+    </script>
+###########################################################################################################################################################
+exemplo de controller e como vem as respostas:
+<?php
+
+namespace App\Http\Controllers;
+
+    public function adicionarPraAssistir(Request $request)
+    {
+       
+        
+        $para_assistir = ParaAssistir::where('usuario_id',$request->usuario_id)->where('video_id',$request->video_id)->first();
+        
+       
+        
+        if(!$para_assistir){
+
+            $request['success'] = true;
+            $request['message'] = 'Adicionado com sucesso';
+            echo json_encode($request->message);
+            
+            $para_assistir = new ParaAssistir();
+            $para_assistir->usuario_id = $request->usuario_id;
+            $para_assistir->video_id = $request->video_id;
+
+            $para_assistir->save();
+            return;
+        }else{
+            $request['success'] = true;
+            $request['message'] = 'já está na lista';
+            echo json_encode($request->message);
+            $para_assistir->delete();
+        }
+        // // return Redirect::back();
+    }
+}
+
+
+
+

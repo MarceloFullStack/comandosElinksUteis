@@ -1,0 +1,29 @@
+https://www.youtube.com/watch?v=bpbcu36t7g0
+Opa pessoal, blz? Aqui é o Marcos, e nesse vídeo eu ensino a como instalar o Docker e o Docker Compose no Ubuntu 18.04
+
+Instalação do Docker:
+-sudo apt update
+-sudo apt install docker.io
+-docker --version
+
+Instalação do curl:
+-sudo apt update
+-sudo apt install curl
+-curl --version
+
+Documentação Docker Compose:
+https://docs.docker.com/compose/install
+
+Releases Docker Compose:
+https://github.com/docker/compose/rel...
+
+Instalação do Docker Compose:
+-sudo apt update
+-sudo curl -L "https://github.com/docker/compose/rel... -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+-sudo chmod +x /usr/local/bin/docker-compose
+-docker-compose --version
+
+Removendo sudo do docker:
+-sudo usermod -aG docker $USER
+-Necessário reiniciar o Ubuntu
+

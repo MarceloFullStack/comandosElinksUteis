@@ -1,0 +1,7 @@
+RewriteCond %{HTTP_HOST} ^fotodelivery\.com\.br$ [OR]
+
+RewriteCond %{HTTP_HOST} ^www\.fotodelivery\.com\.br$
+
+RewriteCond %{REQUEST_URI} !^/public/ 
+
+RewriteRule (.*) /public/$1

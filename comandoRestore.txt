@@ -1,0 +1,1 @@
+psql -h localhost -p 5432 -U postgres -d pagila < /home/marcelodeveloper/Desktop/base\ de\ dados\ psql/pagila-0.10.1/pagila-data.sql

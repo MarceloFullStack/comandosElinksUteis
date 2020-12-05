@@ -1,0 +1,6 @@
+eira de alcançá-lo via terminal é:
+cd ~/Android/sdk/tools
+Para executar um certo AVD diretamente:
+./emulator -avd {AVD_NAME}
+Para listar seus AVDs, use:
+./emulator -list-avds

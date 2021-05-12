@@ -2,5 +2,5 @@ backup
 pg_dump -h 10.1.1.70 -p 5432 -U postgres -d gepeto  > /home/marcelodeveloper/Downloads/teste.dmp
 
 restore
-pg_dump -h localhost -p 5432 -U postgres -d relatorios-teste  < /home/marcelodeveloper/Downloads/teste.dmp
+pgsql -h localhost -p 5432 -U postgres -d relatorios-teste  < /home/marcelodeveloper/Downloads/teste.dmp
 

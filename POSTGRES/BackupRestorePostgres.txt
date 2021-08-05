@@ -4,3 +4,7 @@ pg_dump -h 10.1.1.70 -p 5432 -U postgres -d gepeto  > /home/marcelodeveloper/Dow
 restore
 psql -h localhost -p 5432 -U postgres -d relatorios-teste  < /home/marcelodeveloper/Downloads/teste.dmp
 
+desconectar todos os usuarios da base de dados quando nao esta permitindo deletar o banco por exemplo
+SELECT pg_terminate_backend(pid)
+ FROM pg_stat_activity
+ WHERE datname = 'myDb';
